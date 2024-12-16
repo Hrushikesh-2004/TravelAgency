@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+/*** BASE RULE ***/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app
+{
+    background-color: rgb(249, 251, 253);
+    min-height: 100vh;
+    width:100vw
+}
+
+
+
+/*** THEME ***/
+:root{
+    --main-color: #2e499d;
+    --supporting-color: #5D76c3;
+    --para-color: #1b195b;
+    --white-color: white;
+    --main-background-image: linear-gradient(to left bottom, #b0d5e6, #a7d3e7, #9fd1e8, #96cfea, #8ccdeb, #80c6e7, #73bee4, #66b7e0, #53a9d7, #3f9bce, #288ec4, #0080bb);    gap: 6.4rem;
+    --hover-color: rgb(14, 92, 151);
+
+
+}
+/*** THEME ***/
+
+
+
+
+/*** COMMON FIELDS ***/
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+p, label,span
+{
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: var(--supporting-color);
+}
+
+/*** COMMON FIELDS ***/
+
+
+
+/*** BASE RULE ***/
+
+
+
+
+/*** LAYOUT ***/
+.container{
+    max-width: 142rem;
+    margin: 0px auto;
+    padding: 6.4rem 3.2rem;
+}
+
+.flex{
+    display: flex;
+}
+
+.grid{
+  display: grid;
+}
+
+.grid-auto{
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.grid-two--cols{
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three--cols{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+
+/*** NAVNAR SECTION START***/
+
+.navbar-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 4.2rem; 
+}
+
+.navbar-section .nav-title{
+    font-size: 3.2rem;
+    color: var(--main-color);
+}
+
+.navbar ul{
+    display: flex;
+    gap: 3.2rem;
+}
+.navbar{
+  display: flex;
+  gap: 3.2rem;
+}
+
+.navbar-section .nav-item{
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    font-size: 1.4rem;
+    color: var(--supporting-color);
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -0.2rem;
+        left: 0;
+        width: 0; 
+        border-bottom: 0.2rem solid var(--main-color);
+        /* height: 0.5rem; 
+        background-color: var(--main-color);  */
+        transition: all 0.3s linear;
+    }
+
+    &:hover::after {
+        width: 100%; 
+    }
+}
+
+@media  screen and (max-width: 435px) {
+    .navbar-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar{
+      gap: 0.8rem;
+    }
+  }
+  
+/***** HOME SECTION START *****/
+
+.package-section{
+    & .package-section-title{
+        color: var(--para-color);
+        margin-bottom: 1.2rem;
+        font-size: 2rem;
+    }
+}
+.package {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width: 100%;
+    gap: 0.6rem;
+    border-radius: 0.5rem;
+    
+    &:hover{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
+        transform: scale(1.05);
+      }
+    transition: 0.2s linear;
+
+    & .package-button{
+        width: 40%;
+        background-color: var(--supporting-color);
+        &:hover{
+            transform: scale(0.9);
+        }
+        color: white;
+    }
+
+    & .package-image{
+      width: 100%;
+      height: 40%;
+    }
+  }
+.package-container{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    padding: 3.2rem 6.4rem;
+    gap: 3.2rem;
+    border-radius: 1rem;
+
+
+    & h2{
+        color: var(--para-color);
+    }
+
+    &.package-content-item{
+        color: var(--supporting-color);
+    }
+}
+
+
+
+.form-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 400px;
+    position: relative;
+    margin: 3.2rem auto;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 0;
+    right: -15rem;
+    color: black;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  input, textarea, button {
+    width: 100%;
+    margin: 8px 0;
+    background-color: rgb(231, 231, 231);
+    border: none;
+    border-radius: 0.3rem;
+    color: var(--main-color);
+  }
+  
+  .submit-button {
+    background-color: var(--supporting-color);
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: var(--hover-color);
+  }
+/***** HOME SECTION END *****/
+
+
+
+/***** ADMIN SECTION END *****/
+.add-button{
+  font-size: 2rem;
+  margin-bottom: 3.2rem;
+}
+
+.booking-section{
+  display: flex;
+  flex-direction: column;
+  gap: 4.2rem;
+
+  & .package-section-title{
+    color: var(--supporting-color);
+  }
+}
+/***** ADMIN SECTION END *****/
