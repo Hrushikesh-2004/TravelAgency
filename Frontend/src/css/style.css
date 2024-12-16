@@ -153,6 +153,7 @@ p, label,span
     .navbar-section{
         display: flex;
         flex-direction: column;
+        gap: 1.2rem;
     }
     .navbar{
       gap: 0.8rem;
@@ -268,7 +269,7 @@ p, label,span
   }
     .form-container{
       width: 100%;
-      overflow: scroll;
+      overflow: hidden;
     }
 
     .grid{
@@ -285,6 +286,10 @@ p, label,span
   margin-bottom: 3.2rem;
 }
 
+.admin-panel-title{
+  color: var(--main-color);
+  margin-bottom: 1.2rem;
+}
 .booking-section{
   display: flex;
   flex-direction: column;
