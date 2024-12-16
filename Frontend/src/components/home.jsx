@@ -4,7 +4,7 @@ import '../css/style.css';
 const HomePage = () => {
   const [packages, setPackages] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [selectedPackage, setSelectedPackage] = useState(".");
+  const [selectedPackage, setSelectedPackage] = useState(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
