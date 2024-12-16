@@ -16,7 +16,7 @@ const AdminPanel = () => {
   useEffect(() => {
     const fetchPackages = async () => {
       try {
-        const response = await fetch('http://localhost:5000/packages'); 
+        const response = await fetch('https://travelagency-backend-fc0u.onrender.com/packages'); 
         const data = await response.json();
         setPackages(data);
         setLoading(false);
@@ -56,7 +56,7 @@ const AdminPanel = () => {
 
   const handleDelete = async (pkgId) => {
     try {
-      const response = await fetch(`http://localhost:5000/admin/packages/${pkgId}`, {
+      const response = await fetch(`https://travelagency-backend-fc0u.onrender.com/admin/packages/${pkgId}`, {
         method: 'DELETE'
       });
 
@@ -91,8 +91,8 @@ const AdminPanel = () => {
 
     const method = operationType === 'edit' ? 'PUT' : 'POST';
     const endpoint = operationType === 'edit'
-      ? `http://localhost:5000/admin/packages/${formData.id}` 
-      : 'http://localhost:5000/admin/packages';
+      ? `https://travelagency-backend-fc0u.onrender.com/admin/packages/${formData.id}` 
+      : 'https://travelagency-backend-fc0u.onrender.com/admin/packages';
 
     try {
       const response = await fetch(endpoint, {

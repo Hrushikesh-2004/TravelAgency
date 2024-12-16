@@ -16,7 +16,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchPackages = async () => {
       try {
-        const response = await fetch('http://localhost:5000/packages'); 
+        const response = await fetch('https://travelagency-backend-fc0u.onrender.com/packages'); 
         const data = await response.json();
         setPackages(data);
         setLoading(false);
@@ -53,7 +53,7 @@ const HomePage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/bookings', {
+      const response = await fetch('https://travelagency-backend-fc0u.onrender.com/bookings', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...formData, packageId: selectedPackage._id, totalPrice: calculateTotalPrice() })
