@@ -94,7 +94,7 @@ const HomePage = () => {
       </nav>
     <div className="container package-section">
       <h1 className="package-section-title">Available Travel Packages</h1>
-      <div className="package-container grid grid-auto">
+      <div className="container package-container grid grid-auto">
         {packages.map((pkg) => (
           <div key={pkg._id} className="package">
             <img src={pkg.image} alt={pkg.title} className="package-image" />
@@ -113,7 +113,7 @@ const HomePage = () => {
       </div>
 
       {selectedPackage && (
-        <div id="booking-form" className="form-container">
+        <div id="booking-form" className=" container form-container">
           <button className="close-button" onClick={handleCloseForm}>✖</button>
           <h2>Booking Form for {selectedPackage.title}</h2>
           <form onSubmit={handleSubmit}>

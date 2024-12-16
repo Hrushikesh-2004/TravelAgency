@@ -158,6 +158,8 @@ p, label,span
       gap: 0.8rem;
     }
   }
+
+
   
 /***** HOME SECTION START *****/
 
@@ -203,6 +205,8 @@ p, label,span
     padding: 3.2rem 6.4rem;
     gap: 3.2rem;
     border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
 
 
     & h2{
@@ -220,7 +224,7 @@ p, label,span
     background-color: white;
     padding: 2rem;
     border-radius: 8px;
-    width: 400px;
+    width: 40%;
     position: relative;
     margin: 3.2rem auto;
   }
@@ -255,6 +259,21 @@ p, label,span
   
   .submit-button:hover {
     background-color: var(--hover-color);
+  }
+
+
+  @media screen and (max-width: 600px) {
+    html{
+      font-size: 50%;
+  }
+    .form-container{
+      width: 100%;
+      overflow: scroll;
+    }
+
+    .grid{
+      overflow: scroll;
+    }
   }
 /***** HOME SECTION END *****/
 
