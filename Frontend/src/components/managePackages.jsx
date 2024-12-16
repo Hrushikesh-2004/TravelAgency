@@ -4,7 +4,7 @@ import '../css/style.css';
 const AdminPanel = () => {
   const [packages, setPackages] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [operationType, setOperationType] = useState('.'); 
+  const [operationType, setOperationType] = useState(''); 
   const [formData, setFormData] = useState({
     title: '',
     description: '',
